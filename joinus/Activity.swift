@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class Activity {
     private var curTitle = ""
@@ -42,6 +43,35 @@ class Activity {
     }
     
     func submitActivity() {
+        let urlPath: String = "http://joinus-env.us-east-2.elasticbeanstalk.com/activity/createActivity"
+        let parameters: [String: Any] = [
+            "title": curTitle,
+            "location": curLocation,
+            "descrition": curDescription,
+            "startTime": 123,
+            "endTime": 124
+        ]
         
+        Alamofire.request(urlPath, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON { response in
+                print(response)
+        }
+    }
+    
+    func getActivity() {
+        let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com//activity/listAll"
+        Alamofire.request(urlPath).responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+            }
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+        }
     }
 }
