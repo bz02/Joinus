@@ -18,6 +18,8 @@
 		DA9518AE1F723B1B0072ED4B /* joinusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518AD1F723B1B0072ED4B /* joinusTests.swift */; };
 		DA9518B91F723B1B0072ED4B /* joinusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518B81F723B1B0072ED4B /* joinusUITests.swift */; };
 		DA9518C71F723BE00072ED4B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518C61F723BE00072ED4B /* Activity.swift */; };
+		DA9518C91F7367590072ED4B /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518C81F7367590072ED4B /* ActivityViewController.swift */; };
+		DA9518CB1F74D80A0072ED4B /* ActiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518CA1F74D80A0072ED4B /* ActiveTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		DA9518B81F723B1B0072ED4B /* joinusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinusUITests.swift; sourceTree = "<group>"; };
 		DA9518BA1F723B1B0072ED4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA9518C61F723BE00072ED4B /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		DA9518C81F7367590072ED4B /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		DA9518CA1F74D80A0072ED4B /* ActiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 				DA95189F1F723B1B0072ED4B /* Assets.xcassets */,
 				DA9518A11F723B1B0072ED4B /* LaunchScreen.storyboard */,
 				DA9518A41F723B1B0072ED4B /* Info.plist */,
+				DA9518C81F7367590072ED4B /* ActivityViewController.swift */,
+				DA9518CA1F74D80A0072ED4B /* ActiveTableViewCell.swift */,
 			);
 			path = joinus;
 			sourceTree = "<group>";
@@ -461,9 +467,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9518CB1F74D80A0072ED4B /* ActiveTableViewCell.swift in Sources */,
 				DA9518C71F723BE00072ED4B /* Activity.swift in Sources */,
 				DA95189B1F723B1B0072ED4B /* ViewController.swift in Sources */,
 				DA9518991F723B1B0072ED4B /* AppDelegate.swift in Sources */,
+				DA9518C91F7367590072ED4B /* ActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

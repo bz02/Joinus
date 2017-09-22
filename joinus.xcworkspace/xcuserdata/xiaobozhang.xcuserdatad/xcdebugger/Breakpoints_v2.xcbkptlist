@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "joinus/ActiveTableViewCell.swift"
+            timestampString = "527758144.252883"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "ActiveTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "joinus.ActiveTableViewCell.locationLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "joinus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaobozhang/IOS%20App/joinus/joinus/ActiveTableViewCell.swift"
+                  timestampString = "527754413.666124"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "joinus.ActiveTableViewCell.locationLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "joinus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaobozhang/IOS%20App/joinus/joinus/ActiveTableViewCell.swift"
+                  timestampString = "527754413.670075"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "joinus.ActiveTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; joinus.ActiveTableViewCell"
+                  moduleName = "joinus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaobozhang/IOS%20App/joinus/joinus/ActiveTableViewCell.swift"
+                  timestampString = "527754413.672919"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "367">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "joinus.ActiveTableViewCell.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;joinus.ActiveTableViewCell&gt;"
+                  moduleName = "joinus"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaobozhang/IOS%20App/joinus/joinus/ActiveTableViewCell.swift"
+                  timestampString = "527754413.675755"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "274">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

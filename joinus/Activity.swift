@@ -67,8 +67,8 @@ class Activity {
             "title": curTitle,
             "location": curLocation,
             "descrition": curDescription,
-            "startTime": curStartTime,
-            "endTime": curEndTime
+            "startTime": 123,
+            "endTime": 123
         ]
         
         Alamofire.request(urlPath, method: .post, parameters: parameters, encoding: JSONEncoding.default)
@@ -93,4 +93,5 @@ class Activity {
             }
         }
     }
+
 }
