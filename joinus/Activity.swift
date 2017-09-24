@@ -62,7 +62,7 @@ class Activity {
     }
     
     func submitActivity() {
-        let urlPath: String = "http://joinus-env.us-east-2.elasticbeanstalk.com/activity/createActivity"
+        let urlPath: String = "http://joinus-env.us-east-2.elasticbeanstalk.com/secure/activity/createActivity"
         let parameters: [String: Any] = [
             "title": curTitle,
             "location": curLocation,
@@ -78,7 +78,7 @@ class Activity {
     }
     
     func getActivity() {
-        let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com//activity/listAll"
+        let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com/activity/getActivity"
         Alamofire.request(urlPath).responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response

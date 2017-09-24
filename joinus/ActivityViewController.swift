@@ -26,7 +26,7 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ActiveTableViewCell
         cell.titleLabel.text = titleArr[indexPath.row]
         cell.locationLabel.text = locationArr[indexPath.row]
-        cell.timeLabel.text = timeArr[indexPath.row]
+//        cell.timeLabel.text = timeArr[indexPath.row]
         return(cell)
     }
     
@@ -36,7 +36,7 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
 //    }
     
     func downloadActivity() {
-        let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com//activity/listAll"
+        let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com/activity/getActivity"
         Alamofire.request(urlPath).responseJSON { response in
             if let activeArray = response.result.value as? NSArray {
                 print("activeArray: \(activeArray)")
@@ -46,13 +46,13 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
                             print(name)
                             self.titleArr.append(name as! String)
                         }
-                        if let name = activeDict.value(forKey: "location") {
+                        if let name = activeDict.value(forKey: "description") {
                             self.locationArr.append(name as! String)
                         }
-                        if let name = activeDict.value(forKey: "startTime") {
-                            let num = name as! Int
-                            self.timeArr.append("\(num)")
-                        }
+//                        if let name = activeDict.value(forKey: "startTime") {
+//                            let num = name as! Int
+//                            self.timeArr.append("\(num)")
+//                        }
                         OperationQueue.main.addOperation( {
                             self.tableView.reloadData()
                         })
@@ -62,6 +62,9 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
         downloadActivity()
     }
     
