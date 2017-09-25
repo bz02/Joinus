@@ -35,16 +35,23 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
         performSegue(withIdentifier: "showActivityDetail", sender: titleArr[indexPath.row])
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let guest = segue.destination as! ActivityDetailViewController
-        guest.micky = sender as! String
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let guest = segue.destination as! ActivityDetailViewController
+//        guest.micky = sender as! String
+//    }
     
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == .delete {
 //            
 //        }
 //    }
+    
+    
+    @IBAction func userLogout(_ sender: UIBarButtonItem) {
+        UserDefaults.standard.set(false, forKey: "isUserLoggedin")
+        UserDefaults.standard.synchronize()
+        self.performSegue(withIdentifier: "loginView", sender: self)
+    }
     
     func downloadActivity() {
         let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com/activity/getActivity"
@@ -79,8 +86,12 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
         downloadActivity()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        tableView.rowHeight = UITableViewAutomaticDimension
-//        tableView.estimatedRowHeight = 300
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        let isUserLoggedin = UserDefaults.standard.bool(forKey: "isUserLoggedin")
+        print("-----------test84")
+        print("\(isUserLoggedin)", isUserLoggedin)
+        if (!isUserLoggedin) {
+            self.performSegue(withIdentifier: "loginView", sender: self)
+        }
+    }
 }

@@ -21,6 +21,8 @@
 		DA9518C91F7367590072ED4B /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518C81F7367590072ED4B /* ActivityViewController.swift */; };
 		DA9518CB1F74D80A0072ED4B /* ActiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518CA1F74D80A0072ED4B /* ActiveTableViewCell.swift */; };
 		DA9518CD1F772F470072ED4B /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518CC1F772F470072ED4B /* ActivityDetailViewController.swift */; };
+		DAD532CA1F78CA5700B6A59C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD532C91F78CA5700B6A59C /* RegisterViewController.swift */; };
+		DAD532CC1F78D9E500B6A59C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD532CB1F78D9E500B6A59C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		DA9518C81F7367590072ED4B /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		DA9518CA1F74D80A0072ED4B /* ActiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTableViewCell.swift; sourceTree = "<group>"; };
 		DA9518CC1F772F470072ED4B /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
+		DAD532C91F78CA5700B6A59C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DAD532CB1F78D9E500B6A59C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,12 +153,14 @@
 				DA9518981F723B1B0072ED4B /* AppDelegate.swift */,
 				DA95189A1F723B1B0072ED4B /* ViewController.swift */,
 				DA95189C1F723B1B0072ED4B /* Main.storyboard */,
+				DAD532C91F78CA5700B6A59C /* RegisterViewController.swift */,
 				DA95189F1F723B1B0072ED4B /* Assets.xcassets */,
 				DA9518A11F723B1B0072ED4B /* LaunchScreen.storyboard */,
 				DA9518A41F723B1B0072ED4B /* Info.plist */,
 				DA9518C81F7367590072ED4B /* ActivityViewController.swift */,
 				DA9518CA1F74D80A0072ED4B /* ActiveTableViewCell.swift */,
 				DA9518CC1F772F470072ED4B /* ActivityDetailViewController.swift */,
+				DAD532CB1F78D9E500B6A59C /* LoginViewController.swift */,
 			);
 			path = joinus;
 			sourceTree = "<group>";
@@ -472,7 +478,9 @@
 			files = (
 				DA9518CD1F772F470072ED4B /* ActivityDetailViewController.swift in Sources */,
 				DA9518CB1F74D80A0072ED4B /* ActiveTableViewCell.swift in Sources */,
+				DAD532CA1F78CA5700B6A59C /* RegisterViewController.swift in Sources */,
 				DA9518C71F723BE00072ED4B /* Activity.swift in Sources */,
+				DAD532CC1F78D9E500B6A59C /* LoginViewController.swift in Sources */,
 				DA95189B1F723B1B0072ED4B /* ViewController.swift in Sources */,
 				DA9518991F723B1B0072ED4B /* AppDelegate.swift in Sources */,
 				DA9518C91F7367590072ED4B /* ActivityViewController.swift in Sources */,
