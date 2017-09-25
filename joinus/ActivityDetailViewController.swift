@@ -11,18 +11,14 @@ import UIKit
 class ActivityDetailViewController: UIViewController {
 
     @IBOutlet weak var activityTitle: UILabel!
-    
     @IBOutlet weak var activityLocation: UILabel!
-    
-    
     @IBOutlet weak var activityTime: UILabel!
-    
-    
     @IBOutlet weak var activityDescription: UILabel!
     
+    var micky = "title"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        activityTitle.text = micky
         // Do any additional setup after loading the view.
     }
 

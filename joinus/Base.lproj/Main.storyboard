@@ -50,19 +50,19 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="byg-fc-QGv">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="190.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="260" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="H65-m1-1jn">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="y9x-am-jDJ">
-                                                            <rect key="frame" x="0.0" y="59.5" width="375" height="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="60" id="RJq-Gy-Wdx"/>
                                                                 <constraint firstAttribute="width" constant="375" id="YrM-AN-gc0"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="260" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="H65-m1-1jn">
+                                                            <rect key="frame" x="0.0" y="61" width="375" height="58.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -78,6 +78,7 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.85586196184158325" green="0.96158498525619507" blue="0.9413948655128479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="byg-fc-QGv" firstAttribute="leading" secondItem="AAa-ay-7Ob" secondAttribute="leading" id="72O-dZ-iH9"/>
                                                 <constraint firstAttribute="trailing" secondItem="byg-fc-QGv" secondAttribute="trailing" id="Wgh-Dp-S0q"/>
@@ -89,7 +90,7 @@
                                             <outlet property="locationLabel" destination="511-c2-K8s" id="BEA-Eq-phw"/>
                                             <outlet property="timeLabel" destination="y9x-am-jDJ" id="owz-vL-gi9"/>
                                             <outlet property="titleLabel" destination="H65-m1-1jn" id="FLn-J2-5ZF"/>
-                                            <segue destination="uoW-hW-OMx" kind="show" id="imy-2r-ucQ"/>
+                                            <segue destination="uoW-hW-OMx" kind="show" identifier="showActivityDetail" id="imy-2r-ucQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

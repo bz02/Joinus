@@ -30,9 +30,20 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
         return(cell)
     }
     
-//    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        myIndex = indexPath.row
-//        performSegue(withIdentifier: "segue", sender: self)
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "showActivityDetail", sender: titleArr[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let guest = segue.destination as! ActivityDetailViewController
+        guest.micky = sender as! String
+    }
+    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            
+//        }
 //    }
     
     func downloadActivity() {
