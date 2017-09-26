@@ -15,11 +15,12 @@ class ActivityDetailViewController: UIViewController {
     @IBOutlet weak var activityTime: UILabel!
     @IBOutlet weak var activityDescription: UILabel!
     
-    var micky = "title"
+    var activity = Activity()
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityTitle.text = micky
-        // Do any additional setup after loading the view.
+        activityTitle.text = activity.title
+        activityDescription.text = activity.descrition
+        activityTime.text = String(activity.startTime)
     }
 
     override func didReceiveMemoryWarning() {

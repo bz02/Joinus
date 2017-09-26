@@ -15,37 +15,30 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBOutlet weak var tableView: UITableView!
 
-    var titleArr = [String]()
-    var locationArr = [String]()
-    var timeArr = [String]()
+    var activities = [Activity]()
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (titleArr.count)
+        return (activities.count)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ActiveTableViewCell
-        cell.titleLabel.text = titleArr[indexPath.row]
-        cell.locationLabel.text = locationArr[indexPath.row]
-//        cell.timeLabel.text = timeArr[indexPath.row]
+        cell.titleLabel.text = activities[indexPath.row].title
+        cell.locationLabel.text = activities[indexPath.row].descrition
+        cell.timeLabel.text = String(activities[indexPath.row].startTime)
         return(cell)
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
-        performSegue(withIdentifier: "showActivityDetail", sender: titleArr[indexPath.row])
+        performSegue(withIdentifier: "showActivityDetail", sender: activities[indexPath.row])
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let guest = segue.destination as! ActivityDetailViewController
-//        guest.micky = sender as! String
-//    }
-    
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            
-//        }
-//    }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showActivityDetail" {
+            let guest = segue.destination as! ActivityDetailViewController
+            guest.activity = sender as! Activity
+        }
+    }
     
     @IBAction func userLogout(_ sender: UIBarButtonItem) {
         UserDefaults.standard.set(false, forKey: "isUserLoggedin")
@@ -57,20 +50,20 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
         let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com/activity/getActivity"
         Alamofire.request(urlPath).responseJSON { response in
             if let activeArray = response.result.value as? NSArray {
-                print("activeArray: \(activeArray)")
                 for active in activeArray {
                     if let activeDict = active as? NSDictionary {
+                        let activity = Activity()
                         if let name = activeDict.value(forKey: "title") {
-                            print(name)
-                            self.titleArr.append(name as! String)
+                            activity.title = name as! String
                         }
                         if let name = activeDict.value(forKey: "description") {
-                            self.locationArr.append(name as! String)
+                            activity.descrition = name as! String
                         }
-//                        if let name = activeDict.value(forKey: "startTime") {
-//                            let num = name as! Int
-//                            self.timeArr.append("\(num)")
-//                        }
+                        if let time = activeDict.value(forKey: "startTime") {
+                            let num = time as! Int
+                            activity.startTime = num
+                        }
+                        self.activities.append(activity)
                         OperationQueue.main.addOperation( {
                             self.tableView.reloadData()
                         })
@@ -88,8 +81,6 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidAppear(_ animated: Bool) {
         let isUserLoggedin = UserDefaults.standard.bool(forKey: "isUserLoggedin")
-        print("-----------test84")
-        print("\(isUserLoggedin)", isUserLoggedin)
         if (!isUserLoggedin) {
             self.performSegue(withIdentifier: "loginView", sender: self)
         }
