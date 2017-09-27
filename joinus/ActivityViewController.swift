@@ -23,8 +23,28 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! ActiveTableViewCell
         cell.titleLabel.text = activities[indexPath.row].title
-        cell.locationLabel.text = activities[indexPath.row].descrition
+        cell.descriptionLabel.text = activities[indexPath.row].descrition
         cell.timeLabel.text = String(activities[indexPath.row].startTime)
+        
+        let url = URL(string: "https://static.pexels.com/photos/20787/pexels-photo.jpg")
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if (error != nil) {
+                print("Error")
+            } else {
+                var documentsDirectory:String?
+                var paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+                if paths.count > 0 {
+                    documentsDirectory = paths[0]
+                    let savePath = documentsDirectory! + "/pexels-photo.jpg"
+                    FileManager.default.createFile(atPath: savePath, contents: data, attributes: nil)
+                    DispatchQueue.main.async {
+                        cell.profileImageView.image = UIImage(named: savePath)
+                    }
+                }
+            }
+ 
+        }
+        task.resume()
         return(cell)
     }
     
