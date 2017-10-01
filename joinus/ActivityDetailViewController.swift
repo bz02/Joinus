@@ -14,8 +14,9 @@ class ActivityDetailViewController: UIViewController {
     @IBOutlet weak var activityLocation: UILabel!
     @IBOutlet weak var activityTime: UILabel!
     @IBOutlet weak var activityDescription: UILabel!
-    
+
     var activity = Activity()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         activityTitle.text = activity.title

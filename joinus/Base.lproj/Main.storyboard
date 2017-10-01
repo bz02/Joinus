@@ -215,18 +215,21 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 个人报名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5j-pK-dkN">
+                                                            <rect key="frame" x="0.0" y="128.5" width="70" height="16"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4Iy-Am-8qE">
-                                                            <rect key="frame" x="0.0" y="128.5" width="56" height="106"/>
+                                                            <rect key="frame" x="0.0" y="144.5" width="52" height="90"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 个赞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5j-pK-dkN">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="56" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JV3-PG-2MC">
-                                                                    <rect key="frame" x="0.0" y="20.5" width="56" height="85.5"/>
-                                                                    <state key="normal" title="👍赞"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="90"/>
+                                                                    <state key="normal" title="👍报名"/>
+                                                                    <connections>
+                                                                        <action selector="joinActivity:" destination="h6b-HB-7Yv" eventType="touchUpInside" id="pJd-fc-sKd"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -244,6 +247,7 @@
                                         <connections>
                                             <outlet property="descriptionLabel" destination="ikc-7W-VYQ" id="b2q-UV-khw"/>
                                             <outlet property="locationLabel" destination="g4l-Jn-Erd" id="NQT-Nn-tun"/>
+                                            <outlet property="participantNumberLabel" destination="m5j-pK-dkN" id="SxM-5v-Vqr"/>
                                             <outlet property="profileImageView" destination="HXZ-JQ-rky" id="xUa-JZ-Rc4"/>
                                             <outlet property="timeLabel" destination="Rks-R9-0hM" id="GpY-30-xCT"/>
                                             <outlet property="titleLabel" destination="h6U-yB-85A" id="u8b-fu-i1Z"/>
@@ -276,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7z-Z2-Ly6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82.400000000000006" y="81.409295352323838"/>
+            <point key="canvasLocation" x="-374" y="107"/>
         </scene>
         <!--Activity Detail View Controller-->
         <scene sceneID="FTy-on-tW9">
@@ -635,7 +639,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bob" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srh-HZ-uZa">
-                                <rect key="frame" x="43" y="186" width="31" height="21"/>
+                                <rect key="frame" x="30" y="186" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -675,12 +679,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundImage" destination="FwH-cb-4pq" id="aw7-dN-IyH"/>
+                        <outlet property="nameLabel" destination="srh-HZ-uZa" id="xZb-MO-QYI"/>
                         <outlet property="profileImage" destination="vY4-Da-O3L" id="eId-Dl-KLo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YzA-JE-Tlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1206" y="-813"/>
+            <point key="canvasLocation" x="-1207.2" y="-813.64317841079469"/>
         </scene>
         <!--User Edit View Controller-->
         <scene sceneID="DBm-af-8JD">
@@ -776,7 +781,12 @@
                         <viewLayoutGuide key="safeArea" id="FRy-me-WpH"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="7YU-sI-7y2" id="9aj-Io-61S"/>
+                        <outlet property="ageLabel" destination="ICK-x9-dD1" id="dV0-hS-mHT"/>
+                        <outlet property="genderLabel" destination="iZe-Mh-LcT" id="4uD-c2-rss"/>
+                        <outlet property="nameLabel" destination="UfM-4g-1M0" id="xjy-pX-uUI"/>
                         <outlet property="profileImage" destination="hzH-Di-dLj" id="QG0-Kw-uWl"/>
+                        <outlet property="workLabel" destination="GeJ-7w-19c" id="DDw-J1-dYT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LsO-Zg-vkU" userLabel="First Responder" sceneMemberID="firstResponder"/>

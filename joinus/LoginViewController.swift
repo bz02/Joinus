@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userPassword: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,7 +42,7 @@ class LoginViewController: UIViewController {
                     //converting it as NSDictionary
                     let jsonData = result as! NSDictionary
                     if let httpStatusCode = response.response?.statusCode {
-                        print("httpStatusCode: \(httpStatusCode)")
+//                        print("token: \(jsonData["token"])")
                         switch(httpStatusCode) {
                         case 200:
                             UserDefaults.standard.set(true, forKey: "isUserLoggedin")

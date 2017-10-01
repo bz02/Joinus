@@ -11,16 +11,11 @@ import UIKit
 class ActiveTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var timeLabel: UILabel!
-    
-    
     @IBOutlet weak var locationLabel: UILabel!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var profileImageView: UIImageView!
-    
+    @IBOutlet weak var participantNumberLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

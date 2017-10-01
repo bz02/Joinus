@@ -44,28 +44,30 @@ class UserActivityTableViewController: UIViewController, UITableViewDataSource, 
         print("test 46 user")
         let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com/activity/getActivity"
         Alamofire.request(urlPath).responseJSON { response in
-            if let activeArray = response.result.value as? NSArray {
-                for active in activeArray {
-                    if let activeDict = active as? NSDictionary {
-                        let activity = Activity()
-                        if let name = activeDict.value(forKey: "title") {
-                            activity.title = name as! String
+            if let objDict = response.result.value as? NSDictionary {
+                if let activiArray = objDict["objs"] as? NSArray {
+                    for active in activiArray {
+                        if let activeDict = active as? NSDictionary {
+                            let activity = Activity()
+                            if let name = activeDict.value(forKey: "title") {
+                                activity.title = name as! String
+                            }
+                            if let name = activeDict.value(forKey: "description") {
+                                activity.descrition = name as! String
+                            }
+                            if let time = activeDict.value(forKey: "startTime") {
+                                let num = time as! Int
+                                activity.startTime = num
+                            }
+                            if let address = activeDict.value(forKey: "address") {
+                                activity.location = address as! String
+                            }
+                            self.activities.append(activity)
+                            print("65 activity: \(self.activities.count)")
+                            OperationQueue.main.addOperation( {
+                                self.tableView.reloadData()
+                            })
                         }
-                        if let name = activeDict.value(forKey: "description") {
-                            activity.descrition = name as! String
-                        }
-                        if let time = activeDict.value(forKey: "startTime") {
-                            let num = time as! Int
-                            activity.startTime = num
-                        }
-                        if let address = activeDict.value(forKey: "address") {
-                            activity.location = address as! String
-                        }
-                        self.activities.append(activity)
-                        print("65 activity: \(self.activities.count)")
-                        OperationQueue.main.addOperation( {
-                            self.tableView.reloadData()
-                        })
                     }
                 }
             }

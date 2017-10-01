@@ -9,11 +9,40 @@
 import Foundation
 
 class User {
+    private var curId = 0
+    private var curAge = 0
     private var curUserName = ""
+    private var curEmail = ""
     private var curPassword = ""
-    private var curAge = 1
-    private var curSex = "Male"
+    private var curSelfIntro = ""
+    private var curGender = "Male"
     
+    var email: String {
+        get {
+            return curEmail
+        }
+        set {
+            curEmail = newValue
+        }
+    }
+    
+    var selfIntro: String {
+        get {
+            return curSelfIntro
+        }
+        set {
+            curSelfIntro = newValue
+        }
+    }
+    
+    var gender: String {
+        get {
+            return curGender
+        }
+        set {
+            curGender = newValue
+        }
+    }
     
     var userName: String {
         get {
@@ -39,6 +68,15 @@ class User {
         }
         set {
             curAge = newValue
+        }
+    }
+    
+    var id: Int {
+        get {
+            return curId
+        }
+        set {
+            curId = newValue
         }
     }
 }

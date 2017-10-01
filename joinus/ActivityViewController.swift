@@ -61,36 +61,54 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    @IBAction func userLogout(_ sender: UIBarButtonItem) {
-        UserDefaults.standard.set(false, forKey: "isUserLoggedin")
-        UserDefaults.standard.synchronize()
-        self.performSegue(withIdentifier: "loginView", sender: self)
+    @IBAction func joinActivity(_ sender: UIButton) {
+        let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com/secure/activity/joinActivity"
+        let parameters: [String: Any] = [
+            "id": self.activities[myIndex].id,
+        ]
+        
+        let headers: HTTPHeaders = [
+            "Authorization": UserDefaults.standard.string(forKey:"token")!,
+            "Username": UserDefaults.standard.string(forKey:"Username")!,
+            "Content-Type": "application/json"
+        ]
+        Alamofire.request(urlPath, parameters: parameters, headers: headers).responseJSON { response in
+             print("Request: \(String(describing: response.request))")
+        }
     }
     
     func downloadActivity() {
         let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com/activity/getActivity"
         Alamofire.request(urlPath).responseJSON { response in
-            if let activeArray = response.result.value as? NSArray {
-                for active in activeArray {
-                    if let activeDict = active as? NSDictionary {
-                        let activity = Activity()
-                        if let name = activeDict.value(forKey: "title") {
-                            activity.title = name as! String
+            if let objDict = response.result.value as? NSDictionary {
+                if let activiArray = objDict["objs"] as? NSArray {
+                    for active in activiArray {
+                        if let activeDict = active as? NSDictionary {
+                            let activity = Activity()
+                            if let id = activeDict.value(forKey: "id") {
+                                activity.id = id as!Int
+                            }
+                            if let name = activeDict.value(forKey: "title") {
+                                activity.title = name as! String
+                            }
+                            if let name = activeDict.value(forKey: "description") {
+                                activity.descrition = name as! String
+                            }
+                            if let time = activeDict.value(forKey: "startTime") {
+                                let num = time as! Int
+                                activity.startTime = num
+                            }
+                            if let address = activeDict.value(forKey: "address") {
+                                activity.location = address as! String
+                            }
+    //                        let participentURL = "http://joinus-env.us-east-2.elasticbeanstalk.com/secure/activity/joinActivity"
+    //                        Alamofire.request(participentURL).responseJSON { response in
+    //                        }
+                            self.activities.append(activity)
+                            OperationQueue.main.addOperation( {
+                                self.tableView.reloadData()
+                            })
                         }
-                        if let name = activeDict.value(forKey: "description") {
-                            activity.descrition = name as! String
-                        }
-                        if let time = activeDict.value(forKey: "startTime") {
-                            let num = time as! Int
-                            activity.startTime = num
-                        }
-                        if let address = activeDict.value(forKey: "address") {
-                            activity.location = address as! String
-                        }
-                        self.activities.append(activity)
-                        OperationQueue.main.addOperation( {
-                            self.tableView.reloadData()
-                        })
                     }
                 }
             }

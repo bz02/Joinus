@@ -10,12 +10,22 @@ import Foundation
 import Alamofire
 
 class Activity {
+    private var curId = -1
     private var curTitle = ""
     private var curLocation = ""
     private var curDescription = ""
     private var curSummary = ""
     private var curStartTime = 0
     private var curEndTime = 0
+    
+    var id: Int {
+        get {
+            return curId
+        }
+        set {
+            curId = newValue
+        }
+    }
     
     var title: String {
         get {
@@ -110,5 +120,4 @@ class Activity {
             }
         }
     }
-
 }
