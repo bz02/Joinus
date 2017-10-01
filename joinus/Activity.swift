@@ -13,6 +13,7 @@ class Activity {
     private var curTitle = ""
     private var curLocation = ""
     private var curDescription = ""
+    private var curSummary = ""
     private var curStartTime = 0
     private var curEndTime = 0
     
@@ -43,6 +44,15 @@ class Activity {
         }
     }
     
+    var summary: String {
+        get {
+            return curSummary
+        }
+        set {
+            curSummary = newValue
+        }
+    }
+    
     var startTime: Int {
         get {
             return curStartTime
@@ -66,12 +76,19 @@ class Activity {
         let parameters: [String: Any] = [
             "title": curTitle,
             "location": curLocation,
-            "descrition": curDescription,
+            "description": curDescription,
             "startTime": 123,
-            "endTime": 123
+            "endTime": 123,
+            "summary": curSummary
         ]
         
-        Alamofire.request(urlPath, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        let headers: HTTPHeaders = [
+            "Authorization": UserDefaults.standard.string(forKey:"token")!,
+            "Username": UserDefaults.standard.string(forKey:"Username")!,
+            "Content-Type": "application/json"
+        ]
+        
+        Alamofire.request(urlPath, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
                 print(response)
         }

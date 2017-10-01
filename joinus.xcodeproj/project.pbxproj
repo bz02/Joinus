@@ -13,8 +13,9 @@
 		DA8734961F7B747C00928ACD /* UserEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8734951F7B747C00928ACD /* UserEditViewController.swift */; };
 		DA8734981F7B74A200928ACD /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8734971F7B74A200928ACD /* UserProfileViewController.swift */; };
 		DA87349A1F7B79D700928ACD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8734991F7B79D700928ACD /* User.swift */; };
+		DA87349D1F7E2C4200928ACD /* UserActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87349C1F7E2C4200928ACD /* UserActivityTableViewController.swift */; };
 		DA9518991F723B1B0072ED4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518981F723B1B0072ED4B /* AppDelegate.swift */; };
-		DA95189B1F723B1B0072ED4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95189A1F723B1B0072ED4B /* ViewController.swift */; };
+		DA95189B1F723B1B0072ED4B /* CreateActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95189A1F723B1B0072ED4B /* CreateActivityViewController.swift */; };
 		DA95189E1F723B1B0072ED4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA95189C1F723B1B0072ED4B /* Main.storyboard */; };
 		DA9518A01F723B1B0072ED4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA95189F1F723B1B0072ED4B /* Assets.xcassets */; };
 		DA9518A31F723B1B0072ED4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9518A11F723B1B0072ED4B /* LaunchScreen.storyboard */; };
@@ -59,9 +60,10 @@
 		DA8734971F7B74A200928ACD /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		DA8734991F7B79D700928ACD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DA87349B1F7B8E7100928ACD /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
+		DA87349C1F7E2C4200928ACD /* UserActivityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityTableViewController.swift; sourceTree = "<group>"; };
 		DA9518951F723B1B0072ED4B /* joinus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joinus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9518981F723B1B0072ED4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA95189A1F723B1B0072ED4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA95189A1F723B1B0072ED4B /* CreateActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityViewController.swift; sourceTree = "<group>"; };
 		DA95189D1F723B1B0072ED4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA95189F1F723B1B0072ED4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA9518A21F723B1B0072ED4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -159,8 +161,9 @@
 				DA9518C61F723BE00072ED4B /* Activity.swift */,
 				DA8734991F7B79D700928ACD /* User.swift */,
 				DA9518981F723B1B0072ED4B /* AppDelegate.swift */,
-				DA95189A1F723B1B0072ED4B /* ViewController.swift */,
+				DA95189A1F723B1B0072ED4B /* CreateActivityViewController.swift */,
 				DA95189C1F723B1B0072ED4B /* Main.storyboard */,
+				DA87349C1F7E2C4200928ACD /* UserActivityTableViewController.swift */,
 				DA8734951F7B747C00928ACD /* UserEditViewController.swift */,
 				DA8734971F7B74A200928ACD /* UserProfileViewController.swift */,
 				DAD532C91F78CA5700B6A59C /* RegisterViewController.swift */,
@@ -494,7 +497,8 @@
 				DAD532CA1F78CA5700B6A59C /* RegisterViewController.swift in Sources */,
 				DA9518C71F723BE00072ED4B /* Activity.swift in Sources */,
 				DAD532CC1F78D9E500B6A59C /* LoginViewController.swift in Sources */,
-				DA95189B1F723B1B0072ED4B /* ViewController.swift in Sources */,
+				DA95189B1F723B1B0072ED4B /* CreateActivityViewController.swift in Sources */,
+				DA87349D1F7E2C4200928ACD /* UserActivityTableViewController.swift in Sources */,
 				DA9518991F723B1B0072ED4B /* AppDelegate.swift in Sources */,
 				DA9518C91F7367590072ED4B /* ActivityViewController.swift in Sources */,
 				DA87349A1F7B79D700928ACD /* User.swift in Sources */,

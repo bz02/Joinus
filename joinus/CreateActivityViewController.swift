@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CreateActivityViewController: UIViewController {
     
     @IBOutlet weak var activityName: UITextField!
     
     @IBOutlet weak var activityLocation: UITextField!
     
     @IBOutlet weak var activityDescription: UITextView!
+    
+    
+    @IBOutlet weak var activitySummary: UITextView!
     
     @IBOutlet weak var startTimeField: UITextField!
 
@@ -27,7 +30,7 @@ class ViewController: UIViewController {
         
         sender.inputView = datePickerView
         
-        datePickerView.addTarget(self, action: #selector(ViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        datePickerView.addTarget(self, action: #selector(CreateActivityViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
     }
     
     
@@ -38,7 +41,7 @@ class ViewController: UIViewController {
         
         sender.inputView = datePickerView
         
-        datePickerView.addTarget(self, action: #selector(ViewController.endDatePickerValueChanged), for: UIControlEvents.valueChanged)
+        datePickerView.addTarget(self, action: #selector(CreateActivityViewController.endDatePickerValueChanged), for: UIControlEvents.valueChanged)
     }
     
     @IBAction func submitActivity(_ sender: UIButton) {
@@ -46,6 +49,7 @@ class ViewController: UIViewController {
         activity.title = activityName.text!
         activity.location = activityLocation.text!
         activity.descrition = activityDescription.text!
+        activity.summary = activitySummary.text!
         activity.submitActivity()
     }
     
@@ -76,7 +80,7 @@ class ViewController: UIViewController {
     }
     
  
-
+    
     
 }
 

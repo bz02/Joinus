@@ -1,20 +1,18 @@
 //
-//  ActivityViewController.swift
+//  UserActivityTableViewController
 //  joinus
 //
-//  Created by Xiaobo Zhang on 9/20/17.
+//  Created by Xiaobo Zhang on 9/29/17.
 //  Copyright © 2017 Joinus Tech. All rights reserved.
 //
 
 import UIKit
 import Alamofire
 
-var myIndex = 0
-
-class ActivityViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class UserActivityTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
-
+    
     var activities = [Activity]()
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (activities.count)
@@ -26,25 +24,6 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.descriptionLabel.text = activities[indexPath.row].descrition
         cell.timeLabel.text = String(activities[indexPath.row].startTime)
         cell.locationLabel.text = activities[indexPath.row].location
-//        let url = URL(string: "https://static.pexels.com/photos/20787/pexels-photo.jpg")
-//        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-//            if (error != nil) {
-//                print("Error")
-//            } else {
-//                var documentsDirectory:String?
-//                var paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-//                if paths.count > 0 {
-//                    documentsDirectory = paths[0]
-//                    let savePath = documentsDirectory! + "/pexels-photo.jpg"
-//                    FileManager.default.createFile(atPath: savePath, contents: data, attributes: nil)
-//                    DispatchQueue.main.async {
-//                        cell.profileImageView.image = UIImage(named: savePath)
-//                    }
-//                }
-//            }
-//
-//        }
-//        task.resume()
         cell.profileImageView.image =  UIImage(named: "cat.png")
         return(cell)
     }
@@ -61,13 +40,8 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    @IBAction func userLogout(_ sender: UIBarButtonItem) {
-        UserDefaults.standard.set(false, forKey: "isUserLoggedin")
-        UserDefaults.standard.synchronize()
-        self.performSegue(withIdentifier: "loginView", sender: self)
-    }
-    
     func downloadActivity() {
+        print("test 46 user")
         let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com/activity/getActivity"
         Alamofire.request(urlPath).responseJSON { response in
             if let activeArray = response.result.value as? NSArray {
@@ -88,6 +62,7 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
                             activity.location = address as! String
                         }
                         self.activities.append(activity)
+                        print("65 activity: \(self.activities.count)")
                         OperationQueue.main.addOperation( {
                             self.tableView.reloadData()
                         })
@@ -95,15 +70,6 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
             }
         }
-//        let testActivity = Activity()
-//        testActivity.title = "狼人杀"
-//        testActivity.startTime = 123456
-//        testActivity.location = "San Francisco"
-//        testActivity.descrition = "将有无数狼人杀大神加入"
-//        self.activities.append(testActivity)
-//        OperationQueue.main.addOperation( {
-//            self.tableView.reloadData()
-//        })
     }
     override func viewDidLoad() {
         super.viewDidLoad()

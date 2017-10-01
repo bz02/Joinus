@@ -14,6 +14,9 @@ class ActiveTableViewCell: UITableViewCell {
     
     @IBOutlet weak var timeLabel: UILabel!
     
+    
+    @IBOutlet weak var locationLabel: UILabel!
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var profileImageView: UIImageView!

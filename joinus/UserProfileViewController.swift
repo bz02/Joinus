@@ -13,6 +13,11 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
     
+    @IBAction func userLogout(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "isUserLoggedin")
+        UserDefaults.standard.synchronize()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImage.image = UIImage(named: "cat.png")
@@ -20,4 +25,6 @@ class UserProfileViewController: UIViewController {
         
     }
 
+    
+    
 }
