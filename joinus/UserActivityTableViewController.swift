@@ -41,7 +41,6 @@ class UserActivityTableViewController: UIViewController, UITableViewDataSource, 
     }
     
     func downloadActivity() {
-        print("test 46 user")
         let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com/activity/getActivity"
         Alamofire.request(urlPath).responseJSON { response in
             if let objDict = response.result.value as? NSDictionary {
@@ -63,7 +62,6 @@ class UserActivityTableViewController: UIViewController, UITableViewDataSource, 
                                 activity.location = address as! String
                             }
                             self.activities.append(activity)
-                            print("65 activity: \(self.activities.count)")
                             OperationQueue.main.addOperation( {
                                 self.tableView.reloadData()
                             })

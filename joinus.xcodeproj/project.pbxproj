@@ -10,6 +10,12 @@
 		2EA41DE848890EF4EE2D3BBA /* Pods_joinusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216B3CC46565BFFD4AFF0DA5 /* Pods_joinusUITests.framework */; };
 		938D91E2C9B98367C9D30C75 /* Pods_joinusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277B11335D15B240EC602511 /* Pods_joinusTests.framework */; };
 		A27A891D115919B211DEACE7 /* Pods_joinus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127A58582D752D8AA4478F45 /* Pods_joinus.framework */; };
+		DA82D3CA1FA680BD00D1BF36 /* UserFollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82D3C91FA680BD00D1BF36 /* UserFollowingViewController.swift */; };
+		DA82D3D41FAFD2D800D1BF36 /* UserFollowingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82D3D31FAFD2D800D1BF36 /* UserFollowingTableViewCell.swift */; };
+		DA82D3D61FAFD8EA00D1BF36 /* UserFollweeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82D3D51FAFD8EA00D1BF36 /* UserFollweeViewController.swift */; };
+		DA82D3D81FAFDAB200D1BF36 /* UserFolloweeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82D3D71FAFDAB200D1BF36 /* UserFolloweeTableViewCell.swift */; };
+		DA82D3DA1FAFDC7A00D1BF36 /* InterestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82D3D91FAFDC7A00D1BF36 /* InterestsTableViewController.swift */; };
+		DA82D3DC1FAFDD0600D1BF36 /* InterestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82D3DB1FAFDD0600D1BF36 /* InterestTableViewCell.swift */; };
 		DA8734961F7B747C00928ACD /* UserEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8734951F7B747C00928ACD /* UserEditViewController.swift */; };
 		DA8734981F7B74A200928ACD /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8734971F7B74A200928ACD /* UserProfileViewController.swift */; };
 		DA87349A1F7B79D700928ACD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8734991F7B79D700928ACD /* User.swift */; };
@@ -56,6 +62,12 @@
 		7ABC16C06650D7723079E6EB /* Pods-joinusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-joinusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-joinusTests/Pods-joinusTests.release.xcconfig"; sourceTree = "<group>"; };
 		985E60EFDBC2683ACC88FC28 /* Pods-joinusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-joinusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-joinusUITests/Pods-joinusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1B65EBDF22980C023B425CF /* Pods-joinus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-joinus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-joinus/Pods-joinus.debug.xcconfig"; sourceTree = "<group>"; };
+		DA82D3C91FA680BD00D1BF36 /* UserFollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowingViewController.swift; sourceTree = "<group>"; };
+		DA82D3D31FAFD2D800D1BF36 /* UserFollowingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowingTableViewCell.swift; sourceTree = "<group>"; };
+		DA82D3D51FAFD8EA00D1BF36 /* UserFollweeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollweeViewController.swift; sourceTree = "<group>"; };
+		DA82D3D71FAFDAB200D1BF36 /* UserFolloweeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFolloweeTableViewCell.swift; sourceTree = "<group>"; };
+		DA82D3D91FAFDC7A00D1BF36 /* InterestsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsTableViewController.swift; sourceTree = "<group>"; };
+		DA82D3DB1FAFDD0600D1BF36 /* InterestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestTableViewCell.swift; sourceTree = "<group>"; };
 		DA8734951F7B747C00928ACD /* UserEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditViewController.swift; sourceTree = "<group>"; };
 		DA8734971F7B74A200928ACD /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		DA8734991F7B79D700928ACD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -163,6 +175,8 @@
 				DA9518981F723B1B0072ED4B /* AppDelegate.swift */,
 				DA95189A1F723B1B0072ED4B /* CreateActivityViewController.swift */,
 				DA95189C1F723B1B0072ED4B /* Main.storyboard */,
+				DA82D3D51FAFD8EA00D1BF36 /* UserFollweeViewController.swift */,
+				DA82D3C91FA680BD00D1BF36 /* UserFollowingViewController.swift */,
 				DA87349C1F7E2C4200928ACD /* UserActivityTableViewController.swift */,
 				DA8734951F7B747C00928ACD /* UserEditViewController.swift */,
 				DA8734971F7B74A200928ACD /* UserProfileViewController.swift */,
@@ -175,6 +189,10 @@
 				DA9518CA1F74D80A0072ED4B /* ActiveTableViewCell.swift */,
 				DA9518CC1F772F470072ED4B /* ActivityDetailViewController.swift */,
 				DAD532CB1F78D9E500B6A59C /* LoginViewController.swift */,
+				DA82D3D31FAFD2D800D1BF36 /* UserFollowingTableViewCell.swift */,
+				DA82D3D71FAFDAB200D1BF36 /* UserFolloweeTableViewCell.swift */,
+				DA82D3D91FAFDC7A00D1BF36 /* InterestsTableViewController.swift */,
+				DA82D3DB1FAFDD0600D1BF36 /* InterestTableViewCell.swift */,
 			);
 			path = joinus;
 			sourceTree = "<group>";
@@ -494,13 +512,19 @@
 				DA8734981F7B74A200928ACD /* UserProfileViewController.swift in Sources */,
 				DA9518CD1F772F470072ED4B /* ActivityDetailViewController.swift in Sources */,
 				DA9518CB1F74D80A0072ED4B /* ActiveTableViewCell.swift in Sources */,
+				DA82D3D41FAFD2D800D1BF36 /* UserFollowingTableViewCell.swift in Sources */,
 				DAD532CA1F78CA5700B6A59C /* RegisterViewController.swift in Sources */,
 				DA9518C71F723BE00072ED4B /* Activity.swift in Sources */,
+				DA82D3DC1FAFDD0600D1BF36 /* InterestTableViewCell.swift in Sources */,
 				DAD532CC1F78D9E500B6A59C /* LoginViewController.swift in Sources */,
+				DA82D3CA1FA680BD00D1BF36 /* UserFollowingViewController.swift in Sources */,
+				DA82D3D81FAFDAB200D1BF36 /* UserFolloweeTableViewCell.swift in Sources */,
 				DA95189B1F723B1B0072ED4B /* CreateActivityViewController.swift in Sources */,
 				DA87349D1F7E2C4200928ACD /* UserActivityTableViewController.swift in Sources */,
 				DA9518991F723B1B0072ED4B /* AppDelegate.swift in Sources */,
+				DA82D3D61FAFD8EA00D1BF36 /* UserFollweeViewController.swift in Sources */,
 				DA9518C91F7367590072ED4B /* ActivityViewController.swift in Sources */,
+				DA82D3DA1FAFDC7A00D1BF36 /* InterestsTableViewController.swift in Sources */,
 				DA87349A1F7B79D700928ACD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
