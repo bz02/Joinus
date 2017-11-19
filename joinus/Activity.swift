@@ -11,6 +11,7 @@ import Alamofire
 
 class Activity {
     private var curId = -1
+    private var curUserId = -1
     private var curTitle = ""
     private var curLocation = ""
     private var curDescription = ""
@@ -24,6 +25,15 @@ class Activity {
         }
         set {
             curId = newValue
+        }
+    }
+    
+    var userId: Int {
+        get {
+            return curUserId
+        }
+        set {
+            curUserId = newValue
         }
     }
     

@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import Alamofire
+
+
 
 class InterestsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let interests = ["狼人杀", "扑克", "篮球"]
+    var myIndex = 0
+    
+    @IBOutlet weak var interestTableView: UITableView!
+    var interests = [String]()
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (interests.count)
     }
@@ -23,9 +29,42 @@ class InterestsTableViewController: UIViewController, UITableViewDataSource, UIT
         return(cell)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad();
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.myIndex = indexPath.row
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad();
+        downloadInterests()
+    }
     
+    func downloadInterests() {
+        let headers: HTTPHeaders = [
+            "Authorization": UserDefaults.standard.string(forKey:"token")!,
+            "Username": UserDefaults.standard.string(forKey:"Username")!,
+            "Content-Type": "application/json"
+        ]
+        let urlPath = "http://joinus-env.us-east-2.elasticbeanstalk.com/secure/user/getUser"
+        Alamofire.request(urlPath, headers: headers).responseJSON { response in
+            if let json = response.result.value {
+                print("InterestJSON: \(json)") // serialized json response
+            }
+            if let objDict = response.result.value as? NSDictionary {
+                if let user = objDict["obj"] as? NSDictionary {
+                    if let interestArray = user["interestedActivityType"] as? NSArray {
+                        for interest in interestArray {
+                            self.interests.append(interest as! String)
+                        }
+                        OperationQueue.main.addOperation( {
+                            self.interestTableView.reloadData()
+                        })
+                    }
+                }
+            }
+        }
+    }
+    
+    func unfollowInterest() {
+        
+    }
 }

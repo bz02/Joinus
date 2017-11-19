@@ -88,6 +88,9 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
                             if let id = activeDict.value(forKey: "id") {
                                 activity.id = id as!Int
                             }
+                            if let userId = activeDict.value(forKey: "userId") {
+                                activity.userId = userId as!Int
+                            }
                             if let name = activeDict.value(forKey: "title") {
                                 activity.title = name as! String
                             }
@@ -113,15 +116,6 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
             }
         }
-//        let testActivity = Activity()
-//        testActivity.title = "狼人杀"
-//        testActivity.startTime = 123456
-//        testActivity.location = "San Francisco"
-//        testActivity.descrition = "将有无数狼人杀大神加入"
-//        self.activities.append(testActivity)
-//        OperationQueue.main.addOperation( {
-//            self.tableView.reloadData()
-//        })
     }
     override func viewDidLoad() {
         super.viewDidLoad()

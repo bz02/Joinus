@@ -47,7 +47,12 @@ class LoginViewController: UIViewController {
                         case 200:
                             UserDefaults.standard.set(true, forKey: "isUserLoggedin")
                             UserDefaults.standard.set(jsonData["token"] as! String, forKey: "token")
+                            
+                            UserDefaults.standard.set(String(describing: jsonData["id"]) as! String, forKey: "userId")
+                            print("xiaobozhangid: \(String(describing: jsonData["id"]))")
                             UserDefaults.standard.set(email, forKey: "Username")
+//                            print("xiaobozhang token: \(jsonData["token"])")
+//                            print("xiaobozhang email: \(email)")
                             UserDefaults.standard.synchronize()
                             self.dismiss(animated: true, completion: nil)
                         case 201:
