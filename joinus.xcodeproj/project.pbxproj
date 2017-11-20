@@ -31,6 +31,9 @@
 		DA9518C91F7367590072ED4B /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518C81F7367590072ED4B /* ActivityViewController.swift */; };
 		DA9518CB1F74D80A0072ED4B /* ActiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518CA1F74D80A0072ED4B /* ActiveTableViewCell.swift */; };
 		DA9518CD1F772F470072ED4B /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9518CC1F772F470072ED4B /* ActivityDetailViewController.swift */; };
+		DAAC68991FC2512C00543D64 /* UserBrowseProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC68981FC2512C00543D64 /* UserBrowseProfileViewController.swift */; };
+		DAAC689F1FC2571000543D64 /* ParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC689E1FC2571000543D64 /* ParticipantsTableViewController.swift */; };
+		DAAC68A11FC258CB00543D64 /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC68A01FC258CB00543D64 /* ParticipantTableViewCell.swift */; };
 		DAD532CA1F78CA5700B6A59C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD532C91F78CA5700B6A59C /* RegisterViewController.swift */; };
 		DAD532CC1F78D9E500B6A59C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD532CB1F78D9E500B6A59C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +93,9 @@
 		DA9518C81F7367590072ED4B /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		DA9518CA1F74D80A0072ED4B /* ActiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTableViewCell.swift; sourceTree = "<group>"; };
 		DA9518CC1F772F470072ED4B /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
+		DAAC68981FC2512C00543D64 /* UserBrowseProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBrowseProfileViewController.swift; sourceTree = "<group>"; };
+		DAAC689E1FC2571000543D64 /* ParticipantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsTableViewController.swift; sourceTree = "<group>"; };
+		DAAC68A01FC258CB00543D64 /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
 		DAD532C91F78CA5700B6A59C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DAD532CB1F78D9E500B6A59C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				DA9518C61F723BE00072ED4B /* Activity.swift */,
+				DAAC689E1FC2571000543D64 /* ParticipantsTableViewController.swift */,
 				DA8734991F7B79D700928ACD /* User.swift */,
 				DA9518981F723B1B0072ED4B /* AppDelegate.swift */,
 				DA95189A1F723B1B0072ED4B /* CreateActivityViewController.swift */,
@@ -180,6 +187,7 @@
 				DA87349C1F7E2C4200928ACD /* UserActivityTableViewController.swift */,
 				DA8734951F7B747C00928ACD /* UserEditViewController.swift */,
 				DA8734971F7B74A200928ACD /* UserProfileViewController.swift */,
+				DAAC68981FC2512C00543D64 /* UserBrowseProfileViewController.swift */,
 				DAD532C91F78CA5700B6A59C /* RegisterViewController.swift */,
 				DA95189F1F723B1B0072ED4B /* Assets.xcassets */,
 				DA87349B1F7B8E7100928ACD /* cat.png */,
@@ -190,6 +198,7 @@
 				DA9518CC1F772F470072ED4B /* ActivityDetailViewController.swift */,
 				DAD532CB1F78D9E500B6A59C /* LoginViewController.swift */,
 				DA82D3D31FAFD2D800D1BF36 /* UserFollowingTableViewCell.swift */,
+				DAAC68A01FC258CB00543D64 /* ParticipantTableViewCell.swift */,
 				DA82D3D71FAFDAB200D1BF36 /* UserFolloweeTableViewCell.swift */,
 				DA82D3D91FAFDC7A00D1BF36 /* InterestsTableViewController.swift */,
 				DA82D3DB1FAFDD0600D1BF36 /* InterestTableViewCell.swift */,
@@ -513,6 +522,8 @@
 				DA9518CD1F772F470072ED4B /* ActivityDetailViewController.swift in Sources */,
 				DA9518CB1F74D80A0072ED4B /* ActiveTableViewCell.swift in Sources */,
 				DA82D3D41FAFD2D800D1BF36 /* UserFollowingTableViewCell.swift in Sources */,
+				DAAC689F1FC2571000543D64 /* ParticipantsTableViewController.swift in Sources */,
+				DAAC68991FC2512C00543D64 /* UserBrowseProfileViewController.swift in Sources */,
 				DAD532CA1F78CA5700B6A59C /* RegisterViewController.swift in Sources */,
 				DA9518C71F723BE00072ED4B /* Activity.swift in Sources */,
 				DA82D3DC1FAFDD0600D1BF36 /* InterestTableViewCell.swift in Sources */,
@@ -526,6 +537,7 @@
 				DA9518C91F7367590072ED4B /* ActivityViewController.swift in Sources */,
 				DA82D3DA1FAFDC7A00D1BF36 /* InterestsTableViewController.swift in Sources */,
 				DA87349A1F7B79D700928ACD /* User.swift in Sources */,
+				DAAC68A11FC258CB00543D64 /* ParticipantTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,7 +42,6 @@ class LoginViewController: UIViewController {
                     //converting it as NSDictionary
                     let jsonData = result as! NSDictionary
                     if let httpStatusCode = response.response?.statusCode {
-//                        print("token: \(jsonData["token"])")
                         switch(httpStatusCode) {
                         case 200:
                             UserDefaults.standard.set(true, forKey: "isUserLoggedin")
